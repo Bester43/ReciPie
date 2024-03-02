@@ -3,7 +3,6 @@ package com.oliverhalasz.recipie.ui.views;
 import com.oliverhalasz.recipie.models.Recipe;
 import com.oliverhalasz.recipie.services.recipeservices.RecipeService;
 import com.oliverhalasz.recipie.ui.MainLayout;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.H5;
@@ -20,10 +19,10 @@ import java.util.List;
 @PageTitle("Discover | ReciPie")
 @RolesAllowed("USER")
 @UIScope
-public class Discover extends VerticalLayout {
+public class DiscoverView extends VerticalLayout {
     private final RecipeService recipeService;
 
-    public Discover(RecipeService recipeService) {
+    public DiscoverView(RecipeService recipeService) {
         this.recipeService = recipeService;
 
         List<Recipe> recipes = recipeService.getAllRecipesByAllUsers();
@@ -50,17 +49,15 @@ public class Discover extends VerticalLayout {
 
         HorizontalLayout recipeDetails = new HorizontalLayout();
         recipeDetails.add(cookingTimeField, difficultyLevelField, authorField);
-        recipeDetails.setWidth("100%");
         recipeDetails.addClassName("recipedetails");
 
         recipeLayout.add(titleField, descriptionField, recipeDetails);
 
-        Div clickableRecipeLayout = new Div(recipeLayout);
-        clickableRecipeLayout.addClassName("clickable-recipe-layout");
-        clickableRecipeLayout.addClickListener(event -> {
-            //TODO: Implement this to go to the recipe details
+        recipeLayout.addClickListener(event -> {
+            //TODO:IMPLEMENTÁLNI EZT HOGY A RECEPT RÉSZLETEIHEZ VEZESSEN.
+            //getUI().ifPresent(ui -> ui.navigate("recipe/" + recipe.getId()));
         });
 
-        add(clickableRecipeLayout);
+        add(recipeLayout);
     }
 }

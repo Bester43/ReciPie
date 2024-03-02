@@ -2,7 +2,7 @@ package com.oliverhalasz.recipie.ui;
 
 import com.oliverhalasz.recipie.services.recipeservices.RecipeAddingService;
 import com.oliverhalasz.recipie.services.SecurityService;
-import com.oliverhalasz.recipie.ui.views.Discover;
+import com.oliverhalasz.recipie.ui.views.DiscoverView;
 import com.oliverhalasz.recipie.ui.views.RecipeView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -46,7 +46,7 @@ public class MainLayout extends AppLayout {
         RouterLink recipeLink = new RouterLink("My recipes", RecipeView.class);
         Button addButton = new Button("Add Recipe");
         addButton.addClickListener(e -> recipeAddingService.openAddRecipeDialog());
-        RouterLink discoverRecipesLink = new RouterLink("Discover recipes", Discover.class);
+        RouterLink discoverRecipesLink = new RouterLink("Discover recipes", DiscoverView.class);
 
         addToDrawer(recipeLink, discoverRecipesLink, addButton);
     }

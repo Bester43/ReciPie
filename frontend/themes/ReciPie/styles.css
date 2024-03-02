@@ -1,0 +1,36 @@
+.header {
+    background-color: #e5e5e5;
+    color: white;
+    padding: .4%;
+    display: flex;
+    margin-top: 0;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipedetails{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clickable-recipe-layout{
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.recipe-card {
+    display: flex;
+    flex: fit-content;
+    align-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 20px);
+}

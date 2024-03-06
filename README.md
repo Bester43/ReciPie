@@ -43,7 +43,7 @@ Update the application.yml file with your database URL, username, and password.
     - Password: password
 
 ### Recipe Management
-- Users can create, update, and delete their recipes.
+- Users can create, and delete their recipes.
 - Each recipe includes details such as title, description, cooking time, and difficulty level.
 
 ### Recipe Discovery

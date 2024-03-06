@@ -28,7 +28,7 @@ Update the application.yml file with your database URL, username, and password.
 ### Run the Application:
 
 ```bash
-  mvn spring-boot:run
+  .\mvnw spring-boot:run
 ```
 
 ## Features

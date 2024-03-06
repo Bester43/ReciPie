@@ -4,9 +4,6 @@
 ## Overview
 The ReciPie application is a web-based platform designed to manage and share recipes. It allows users to create, view, and discover recipes contributed by the community. The application provides features for user authentication, recipe management, and browsing recipes.
 
-## Installation and Setup
-To set up the ReciPie application, follow these steps:
-
 ## Run Locally
 
 ### Clone the project
